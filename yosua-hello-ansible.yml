@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+          - name: Print hello world in terminal
+            command: echo "Hello World"
+            register: hello
+
+          - debug: msg="{{ hello.stdout }}"
+
+           
